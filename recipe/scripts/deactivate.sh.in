@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+# No additional environment variables to unset for PODIO.

@@ -1,0 +1,63 @@
+{% set versions = {
+    "1.7.0": "4a62ed2fdd9cebb5fc1799ea17237979b2d435797f1201fa8031fd99e9e47c15"
+} %}
+{% set tags = {
+    "1.7.0": "v01-07"
+} %}
+
+{% set version = environ.get('COMMIT_VERSION', None) %}
+{% set version = version or versions.keys()|first %}
+{% set version = version|string %}
+{% set tag = tags.get(version, "v" + version) %}
+
+build:
+  number: 0
+  string: "root{{ root.replace('.', '') }}"
+  skip: true  # [win]
+
+package:
+  name: {{ environ.get('ANACONDA_PACKAGE', "podio")|string|lower }}
+  version: {{ environ.get('ANACONDA_VERSION', version)|replace("-", ".") }}
+
+source:
+  url: https://github.com/AIDASoft/podio/archive/refs/tags/{{ tag }}.tar.gz
+  {% if versions.get(version, None) %}
+  sha256: {{ versions.get(version) }}
+  {% endif %}
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - cmake
+    - make
+    - python
+  host:
+    - python
+    - root {{ root }}.*
+    - fmt
+  run:
+    - python
+    - root {{ root }}.*
+
+test:
+  commands:
+    - podio-dump --help
+    - test -f ${PREFIX}/lib/libpodio.so        # [linux]
+    - test -f ${PREFIX}/lib/libpodio.dylib     # [osx]
+
+about:
+  home: https://github.com/AIDASoft/podio
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: "PODIO is a C++ library to support the creation and handling of data models in particle physics."
+  description: |
+    PODIO is a C++ library to support the creation and handling of data models
+    in particle physics. It uses a code generation approach to translate a
+    YAML-based data model description into C++ code. It is part of the Key4hep
+    software stack for future HEP collider experiments.
+  dev_url: https://github.com/AIDASoft/podio
+
+extra:
+  recipe-maintainers:
+    - meiyasan

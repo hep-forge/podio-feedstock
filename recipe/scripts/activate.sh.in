@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# No additional environment variables required for PODIO.
+# The conda prefix is automatically added to CMAKE_PREFIX_PATH,
+# allowing downstream packages to find podioConfig.cmake.
