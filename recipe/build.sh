@@ -9,7 +9,6 @@ cd ..
 cmake -S . -B build \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_CXX_STANDARD=20 \
     -DENABLE_SIO=OFF \
     -DENABLE_JULIA=OFF \
     -DBUILD_TESTING=OFF \
