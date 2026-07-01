@@ -9,6 +9,3 @@ c_stdlib_version:              # [unix]
 root:
   - 6.36
   - 6.38
-
-zip_keys:
-  - root
