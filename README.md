@@ -22,66 +22,6 @@ Current build status
 
 
 <table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-            <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_root6.36</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root6.36" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_root6.38</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root6.38" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_root6.36</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root6.36" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_root6.38</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_root6.38" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_root6.36</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root6.36" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_root6.38</td>
-              <td>
-                <a href="https://dev.azure.com/hep-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/hep-forge/feedstock-builds/_apis/build/status/podio-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_root6.38" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
