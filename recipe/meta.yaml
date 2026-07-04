@@ -35,7 +35,10 @@ requirements:
     - make
   host:
     - root {{ root }}.*
-    - fmt
+    # tools/src/tabulate.h uses fmt::format in a way fmt 12 removed/
+    # changed (build error: "'format' is not a member of 'fmt'"); cap
+    # below the break until podio's bundled tabulate.h is updated upstream.
+    - fmt <12
   run:
     - root {{ root }}.*
 
