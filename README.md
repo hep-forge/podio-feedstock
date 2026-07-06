@@ -16,7 +16,7 @@ PODIO is a C++ library to support the creation and handling of data models in pa
 | Architecture | Latest published |
 |--------------|------------------|
 | linux-amd64 (`linux-64`) | ✅ `1.7.0` |
-| linux-arm64 (`linux-aarch64`) | ❌ not published |
+| linux-arm64 (`linux-aarch64`) | ✅ `1.7.0` |
 
 _As of the last feedstock render; the badges above are live._
 
