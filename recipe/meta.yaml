@@ -55,7 +55,8 @@ test:
   commands:
     - podio-dump --help
     - test -f ${PREFIX}/lib/libpodio.so        # [linux]
-    - test -f ${PREFIX}/lib/libpodio.dylib     # [osx]
+    # podio's CMake names its libraries .so on macOS too (ROOT-style modules)
+    - test -f ${PREFIX}/lib/libpodio.so        # [osx]
 
 about:
   home: https://github.com/AIDASoft/podio
