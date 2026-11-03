@@ -48,8 +48,13 @@ requirements:
     # changed (build error: "'format' is not a member of 'fmt'"); cap
     # below the break until podio's bundled tabulate.h is updated upstream.
     - fmt <12
+    # podioConfig.cmake records the python podio was configured with; without
+    # one in host that was the build env's (3.14), which then refuses every
+    # consumer's 3.12. Linux has the same gap, but nothing there trips it yet.
+    - python  # [osx]
   run:
     - root {{ root }}.*
+    - python  # [osx]
 
 test:
   commands:
