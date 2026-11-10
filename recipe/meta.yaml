@@ -43,7 +43,7 @@ requirements:
     - cmake
     - make
   host:
-    - root {{ root }}.*
+    - root_base {{ root }}.* cxx{{ root_cxx_standard }}*
     # tools/src/tabulate.h uses fmt::format in a way fmt 12 removed/
     # changed (build error: "'format' is not a member of 'fmt'"); cap
     # below the break until podio's bundled tabulate.h is updated upstream.
@@ -53,7 +53,7 @@ requirements:
     # consumer's 3.12. Linux has the same gap, but nothing there trips it yet.
     - python  # [osx]
   run:
-    - root {{ root }}.*
+    - {{ pin_compatible('root_base', exact=True) }}
     - python  # [osx]
 
 test:
