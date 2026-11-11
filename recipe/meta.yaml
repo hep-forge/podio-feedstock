@@ -50,11 +50,13 @@ requirements:
     - fmt <12
     # podioConfig.cmake records the python podio was configured with; without
     # one in host that was the build env's (3.14), which then refuses every
-    # consumer's 3.12. Linux has the same gap, but nothing there trips it yet.
-    - python  # [osx]
+    # consumer's 3.12. Every platform: conda-forge's root_base is built once
+    # per Python, and without python here Linux picked the 3.14 one, whose
+    # ROOTConfig.cmake then demanded exactly the Python it was built with.
+    - python
   run:
     - {{ pin_compatible('root_base', exact=True) }}
-    - python  # [osx]
+    - python
 
 test:
   commands:
